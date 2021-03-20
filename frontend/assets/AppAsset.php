@@ -13,7 +13,7 @@ class AppAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
         'css/site.css',
-        'assets/fa/css/all.min.css',
+        'fa/css/all.min.css',
         'css/daterangepicker.css',
     ];
     public $js = [

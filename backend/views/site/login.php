@@ -15,7 +15,7 @@ $this->title = 'Masuk';
       <div class="card login-card">
         <div class="row no-gutters">
           <div class="col-md-5">
-            <img src="/assets/img/library.jpeg" alt="login" class="login-card-img">
+            <img src="/img/library.jpeg" alt="login" class="login-card-img">
           </div>
           <div class="col-md-7 pl-5">
             <div class="card-body">

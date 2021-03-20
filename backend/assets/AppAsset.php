@@ -14,7 +14,7 @@ class AppAsset extends AssetBundle
     public $css = [
         'css/site.css',
         'css/login.css',
-        'assets/fa/css/all.min.css',
+        'fa/css/all.min.css',
     ];
     public $js = [
     ];
