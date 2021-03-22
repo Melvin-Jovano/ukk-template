@@ -29,7 +29,7 @@ $this->params['breadcrumbs'][] = $this->title;
     ]); ?>
 
     <p class="float-right">
-        <?= Html::a('Buat Data Kelas baru', ['create'], ['class' => 'btn btn-success my-3']) ?>
+        <?= Html::a('Buat Data baru', ['create'], ['class' => 'btn btn-success my-3']) ?>
     </p>
 
 </div>
