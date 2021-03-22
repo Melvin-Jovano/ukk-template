@@ -12,12 +12,10 @@ use frontend\models\Skill;
 use frontend\models\Student;
 use yii\helpers\Url;
 
-$this->title = 'Generate Laporan';
-
 ?>
 
 <?php if (Yii::$app->user->identity->level == 2):?>
-    <button id="printPDF" class="btn btn-dark btn-sm ml-3"><i class="far fa-file-pdf mr-2"></i>Cetak PDF</button>
+    <button id="printPDF" class="btn btn-success btn-sm ml-3">Export PDF</button>
 <?php endif; ?>
 <page>
     <div id="pdf-area" class="p-3">
