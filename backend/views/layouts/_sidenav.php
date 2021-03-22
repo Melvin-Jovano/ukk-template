@@ -24,7 +24,7 @@ $currentUrl = $this->context->route;
                             </a>
 
                             <a class="nav-link <?= $currentUrl == "spp/index" || $currentUrl == "spp/create" || $currentUrl == "spp/view" || $currentUrl == "spp/update" || $currentUrl == "spp/delete" ? "active" : "" ?>" href="<?= Url::toRoute(['spp/index']); ?>">
-                                CRUD Pembayaran
+                                CRUD SPP
                             </a>
                             
                             <a class="nav-link <?= $currentUrl == "site/billing" ? "active" : "" ?>" href="<?= Url::toRoute(['site/billing']); ?>">
@@ -41,8 +41,14 @@ $currentUrl = $this->context->route;
 
                                 <a class="nav-link <?= $currentUrl == "site/report" ? "active" : "" ?>" href="<?= Url::toRoute(['site/report']); ?>">
                                     Lihat History
-                            </a>
+                                </a>
                             <?php endif; ?>
+                                
+                                <div class="dropdown-divider"></div>
+
+                                <a class="nav-link" data-method="post" href="<?= Url::toRoute(['site/logout']); ?>">
+                                    <div class="btn-danger btn-block btn">Logout (<?= Yii::$app->user->identity->nama_petugas; ?>)</div>
+                                </a>
                         </div>
                     </div>
                 </nav>

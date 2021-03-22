@@ -12,6 +12,8 @@ use frontend\models\Skill;
 use frontend\models\Student;
 use yii\helpers\Url;
 
+$this->title = 'Generate Laporan';
+
 ?>
 
 <?php if (Yii::$app->user->identity->level == 2):?>
@@ -20,7 +22,7 @@ use yii\helpers\Url;
 <page>
     <div id="pdf-area" class="p-3">
         <h4 class="text-center mb-4 mt-2">Laporan Pembayaran Sekolah <span id="dateReport"></span></h4>
-        <table class="table table-striped">
+        <table class="table table-bordered">
             <tr>
                 <th>No.</th>
                 <th>Nama</th>
