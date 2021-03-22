@@ -19,7 +19,7 @@ use yii\helpers\Html;
     // ];
     if (Yii::$app->user->isGuest) {
         // $menuItems[] = ['label' => '<i class="fas fa-user-plus mr-2"></i>Daftar', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Masuk', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         // $menuItems[] = ['label' => '<i class="fas fa-signal mr-2"></i>Riwayat Pembayaran', 'url' => ['/site/dashboard']];
         // $menuItems[] = ['label' => '<i class="fas fa-address-card mr-2"></i>Biodata', 'url' => ['/site/profile']];
