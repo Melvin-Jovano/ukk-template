@@ -32,7 +32,7 @@ $currentUrl = $this->context->route;
                             </a>
 
                             <a class="nav-link <?= $currentUrl == "site/report" ? "active" : "" ?>" href="<?= Url::toRoute(['site/report']); ?>">
-                                Generate Laporan
+                                History & Generate Laporan
                             </a>
                             <?php else: ?>
                                 <a class="nav-link <?= $currentUrl == "site/billing" ? "active" : "" ?>" href="<?= Url::toRoute(['site/billing']); ?>">

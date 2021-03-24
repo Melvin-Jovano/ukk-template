@@ -139,7 +139,7 @@ $this->registerJs('
                         tr.append(tdTotal);
 
                         document.querySelector("#tbody").append(tr);
-                        $("#dateReport").html("Seluruh Data");
+                        $("#dateReport").html("");
                     }   
                 }
             });
