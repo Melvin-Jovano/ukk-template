@@ -12,15 +12,15 @@ $this->params['breadcrumbs'][] = $this->title;
 ?>
     <div class="row">
         <div class="col-lg-3"></div>
-        <div class="col-lg-6 card p-5 my-2">
+        <div class="col-lg-6 p-5 my-2">
             <h1 class="mb-5"><?= Html::encode($this->title) ?></h1>
 
             <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
                 <?php if($password): ?>
-                    <?= $form->field($model, 'nisn')->textInput(['readonly' => true, 'placeholder' => "Silahkan Isi NISN Untuk Masuk"])->label("NISN"); ?>
+                    <?= $form->field($model, 'nisn')->textInput(['readonly' => true, 'placeholder' => "Silahkan Isi NISN Untuk Masuk"])->label("NISN")->label(false); ?>
                     <?= $form->field($model, 'password')->passwordInput(['autofocus' => true])->label("Kata Sandi"); ?>
                 <?php else: ?>
-                    <?= $form->field($model, 'nisn')->textInput(['autofocus' => true, 'placeholder' => "Silahkan Isi NISN Untuk Masuk"])->label("NISN"); ?>
+                    <?= $form->field($model, 'nisn')->textInput(['autofocus' => true, 'placeholder' => "Silahkan Isi NISN Untuk Masuk"])->label("NISN")->label(false); ?>
                     <?= $form->field($model, 'password')->passwordInput(['style' => 'display:none;'])->label(false); ?>
                 <?php endif; ?>
 

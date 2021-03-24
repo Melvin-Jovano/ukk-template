@@ -8,7 +8,7 @@ use yii\helpers\Html;
 
 <?php
     NavBar::begin([
-        'brandLabel' => '<b>SPP APP</b>',
+        'brandLabel' => '<b>Pembayaran Sekolah</b>',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'shadow navbar-expand-lg navbar-light bg-light sticky-top',
@@ -19,7 +19,7 @@ use yii\helpers\Html;
     // ];
     if (Yii::$app->user->isGuest) {
         // $menuItems[] = ['label' => '<i class="fas fa-user-plus mr-2"></i>Daftar', 'url' => ['/site/signup']];
-        $menuItems[] = ['label' => 'Masuk', 'url' => ['/site/login']];
+        $menuItems[] = ['label' => 'Login', 'url' => ['/site/login']];
     } else {
         // $menuItems[] = ['label' => '<i class="fas fa-signal mr-2"></i>Riwayat Pembayaran', 'url' => ['/site/dashboard']];
         // $menuItems[] = ['label' => '<i class="fas fa-address-card mr-2"></i>Biodata', 'url' => ['/site/profile']];
@@ -28,7 +28,7 @@ use yii\helpers\Html;
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
                 'Logout (' . Yii::$app->user->identity->nama . ')',
-                ['class' => 'btn btn-link logout']
+                ['class' => 'btn btn-danger logout']
             )
             . Html::endForm()
             . '</li>';
