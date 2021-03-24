@@ -2,24 +2,24 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Riwayat Pembayaran';
+$this->title = 'Riwayat';
 ?>
 <div class="pt-5">
 
     <div class="row">
         <div class="col-lg-2"></div>
-        <div class="col-lg-8 card p-5 my-2">
-            <h2 class="text-center">History Pembayaran</h2>
+        <div class="col-lg-8 p-5 my-2">
+            <h2 class="text-center">History</h2>
             <!-- <hr> -->
                 <!-- <input autocomplete="off" type="text" name="date" id="datepicker" class="form-control"> -->
                 <br><br>
                 <!-- <button id="findAll" class="btn btn-dark mb-3"><i class="fas fa-search mr-2"></i>Semua Pembayaran</button> -->
                 <div id="table">
-                    <table class="table table-bordered">
+                    <table class="table table-strpied">
                         <tr>
                             <td>No</td>
                             <td>Waktu</td>
-                            <td>Jumlah Yang Dibayar</td>
+                            <td>Nominal</td>
                         </tr>
                         <tbody id="tbody">
                             

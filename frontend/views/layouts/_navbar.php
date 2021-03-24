@@ -8,10 +8,10 @@ use yii\helpers\Html;
 
 <?php
     NavBar::begin([
-        'brandLabel' => '<b>Siswa</b>',
+        'brandLabel' => '<b>Pembayaran Sekolah</b>',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'shadow navbar-expand-lg navbar-light bg-warning sticky-top',
+            'class' => 'shadow navbar-expand-lg navbar-light bg-light sticky-top',
         ],
     ]);
     // $menuItems = [

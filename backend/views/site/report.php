@@ -17,7 +17,7 @@ $this->title = 'Generate Laporan';
 ?>
 
 <?php if (Yii::$app->user->identity->level == 2):?>
-    <button id="printPDF" class="btn btn-success btn-sm ml-3">Download PDF</button>
+    <button id="printPDF" class="btn btn-success btn-sm ml-3">Export PDF</button>
 <?php endif; ?>
 <page>
     <div id="pdf-area" class="p-3">
@@ -139,7 +139,7 @@ $this->registerJs('
                         tr.append(tdTotal);
 
                         document.querySelector("#tbody").append(tr);
-                        // $("#dateReport").html("Seluruh Data");
+                        $("#dateReport").html("Seluruh Data");
                     }   
                 }
             });
