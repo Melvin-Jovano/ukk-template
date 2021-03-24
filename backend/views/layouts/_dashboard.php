@@ -23,7 +23,7 @@ DashboardAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="sb-nav-fixed">
+<body class="sb-nav-fixed bg-secondary">
 <?php $this->beginBody() ?>
 
     <?= $this->render("_navbar.php"); ?>

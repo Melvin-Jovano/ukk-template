@@ -8,7 +8,7 @@ use yii\helpers\Html;
 
 <?php
     NavBar::begin([
-        'brandLabel' => '<b>SPP APP</b>',
+        'brandLabel' => '<b>SMKN 9</b>',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
             'class' => 'shadow navbar-expand-lg navbar-light bg-light sticky-top',
@@ -28,7 +28,7 @@ use yii\helpers\Html;
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
                 'Logout (' . Yii::$app->user->identity->nama . ')',
-                ['class' => 'btn btn-link logout']
+                ['class' => 'btn btn-danger logout']
             )
             . Html::endForm()
             . '</li>';

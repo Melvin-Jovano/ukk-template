@@ -23,7 +23,7 @@ MainAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="sb-nav-fixed" style="background-color: whitesmoke">
+<body class="sb-nav-fixed">
 <?php $this->beginBody() ?>
 
     <?= $this->render("_navbar.php"); ?>

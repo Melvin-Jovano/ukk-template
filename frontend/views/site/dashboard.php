@@ -2,14 +2,14 @@
 
 /* @var $this yii\web\View */
 
-$this->title = 'Riwayat Pembayaran';
+$this->title = 'History Pembayaran';
 ?>
 <div class="pt-5">
 
     <div class="row">
         <div class="col-lg-2"></div>
-        <div class="col-lg-8 card p-5 my-2">
-            <h2 class="text-center">History Pembayaran</h2>
+        <div class="col-lg-8 p-5 my-2">
+            <h2 class="text-center">History</h2>
             <!-- <hr> -->
                 <!-- <input autocomplete="off" type="text" name="date" id="datepicker" class="form-control"> -->
                 <br><br>
@@ -18,8 +18,8 @@ $this->title = 'Riwayat Pembayaran';
                     <table class="table table-bordered">
                         <tr>
                             <td>No</td>
-                            <td>Waktu</td>
-                            <td>Jumlah Yang Dibayar</td>
+                            <td>Tgl</td>
+                            <td>Jumlah</td>
                         </tr>
                         <tbody id="tbody">
                             
