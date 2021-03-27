@@ -82,7 +82,7 @@ $this->registerJs('
         function getAllData() {
             let formData = new FormData;
             $.ajax({
-                url : "/adit_ukk/admin/action/get-all-history",
+                url : "/putri_ukk/admin/action/get-all-history",
                 type : "post",
                 data: formData,
                 processData: false,
