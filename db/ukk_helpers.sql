@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2021 at 04:55 PM
+-- Generation Time: Mar 22, 2021 at 08:42 AM
 -- Server version: 10.4.8-MariaDB
 -- PHP Version: 7.3.11
 
@@ -106,7 +106,7 @@ CREATE TABLE `petugas` (
 
 INSERT INTO `petugas` (`id`, `username`, `password`, `nama_petugas`, `level`) VALUES
 (1, 'admin', '$2y$13$XaSW9bEmV2iCQl/WEk55ZuixyGLS35f5yk1v2Z4AioDxOOonnub8i', 'Administrator', '2'),
-(3, 'asd', '$2y$13$V9NkLcsCaCqxkF50e3z8EuZQTdtBtAhINAiKj627nZSSoSQt6rKea', 'asd', '1');
+(3, 'asd', '$2y$13$V9NkLcsCaCqxkF50e3z8EuZQTdtBtAhINAiKj627nZSSoSQt6rKea', 'asd', '2');
 
 -- --------------------------------------------------------
 
@@ -131,9 +131,7 @@ CREATE TABLE `siswa` (
 --
 
 INSERT INTO `siswa` (`nisn`, `nis`, `nama`, `id_kelas`, `id_jurusan`, `alamat`, `no_telp`, `id_spp`, `created_at`) VALUES
-(123123123, 123321123, 'Shamiko Misstresso', 3, 2, 'Tokyo', '0823-6438-6074', NULL, '2021-03-14 15:21:36'),
-(132132132, 132132132, 'Mashiro Yuri', 2, 2, 'Fuji', '082364386074', NULL, '2021-03-18 08:23:54'),
-(321321321, 213321213, 'Yukihira Shouma', 1, 4, 'Akihabaraa', '0892344512', NULL, '2021-03-14 15:30:51');
+(15435, 12313123, 'cintami', 3, 1, 'medan', '082364386074', NULL, '2021-03-21 06:01:58');
 
 -- --------------------------------------------------------
 
@@ -153,13 +151,7 @@ CREATE TABLE `spp` (
 --
 
 INSERT INTO `spp` (`id`, `nisn`, `nominal`, `created_at`) VALUES
-(1, 123123123, '150000', '2021-03-19 09:21:57'),
-(2, 123123123, '150000', '2021-03-19 09:23:07'),
-(3, 123123123, '150000', '2021-03-18 11:56:48'),
-(4, 321321321, '150000', '2021-03-18 11:57:30'),
-(5, 123123123, '150000', '2021-03-18 09:11:25'),
-(7, 123123123, '200000', '2021-03-20 07:26:19'),
-(8, 123123123, '150000', '2021-03-20 13:42:19');
+(11, 15435, '150000', '2021-03-22 07:29:31');
 
 --
 -- Indexes for dumped tables
@@ -221,13 +213,13 @@ ALTER TABLE `kelas`
 -- AUTO_INCREMENT for table `petugas`
 --
 ALTER TABLE `petugas`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `spp`
 --
 ALTER TABLE `spp`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

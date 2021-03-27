@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  * This file is part of PHPUnit.
  *
@@ -9,51 +9,48 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
+use function file_exists;
+use function sprintf;
+
 /**
  * Constraint that checks if the file(name) that it is evaluated for exists.
  *
  * The file path to check is passed as $other in evaluate().
  */
-class FileExists extends Constraint
+final class FileExists extends Constraint
 {
+    /**
+     * Returns a string representation of the constraint.
+     */
+    public function toString(): string
+    {
+        return 'file exists';
+    }
+
     /**
      * Evaluates the constraint for parameter $other. Returns true if the
      * constraint is met, false otherwise.
      *
-     * @param mixed $other Value or object to evaluate.
-     *
-     * @return bool
+     * @param mixed $other value or object to evaluate
      */
-    protected function matches($other)
+    protected function matches($other): bool
     {
-        return \file_exists($other);
+        return file_exists($other);
     }
 
     /**
-     * Returns the description of the failure
+     * Returns the description of the failure.
      *
      * The beginning of failure messages is "Failed asserting that" in most
      * cases. This method should return the second part of that sentence.
      *
-     * @param mixed $other Evaluated value or object.
-     *
-     * @return string
+     * @param mixed $other evaluated value or object
      */
-    protected function failureDescription($other)
+    protected function failureDescription($other): string
     {
-        return \sprintf(
+        return sprintf(
             'file "%s" exists',
             $other
         );
-    }
-
-    /**
-     * Returns a string representation of the constraint.
-     *
-     * @return string
-     */
-    public function toString()
-    {
-        return 'file exists';
     }
 }

@@ -7,21 +7,17 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Masuk';
+$this->title = 'Login Admin';
 ?>
 
 <main class="d-flex align-items-center py-md-0">
     <div class="container">
-      <div class="card login-card">
+      <div class="card login-card" style="background-color:#F37125">
         <div class="row no-gutters">
-          <div class="col-md-5">
-            <img src="/img/library.jpeg" alt="login" class="login-card-img">
-          </div>
-          <div class="col-md-7 pl-5">
+        <div class="col-md-3"></div>
+          <div class="col-md-6">
             <div class="card-body">
                 <h1><?= Html::encode($this->title) ?></h1>
-                
-                <p>Mohon Isi Data Dibawah Agar Dapat Masuk :</p>
 
                 <?php $form = ActiveForm::begin(['id' => 'login-form']); ?>
 
@@ -29,12 +25,12 @@ $this->title = 'Masuk';
                 
                 <br>
 
-                <?= $form->field($model, 'password')->passwordInput()->label("Kata Sandi"); ?>
+                <?= $form->field($model, 'password')->passwordInput()->label("Password"); ?>
 
                 <br>
 
                 <div class="form-group">
-                    <?= Html::submitButton('<i class="fas fa-door-open"></i>&nbsp;&nbsp;Masuk', ['class' => 'btn btn-dark btn-block', 'name' => 'login-button']) ?>
+                    <?= Html::submitButton('Login', ['class' => 'btn btn-success', 'name' => 'login-button']) ?>
                 </div>
 
                 <?php ActiveForm::end(); ?>
