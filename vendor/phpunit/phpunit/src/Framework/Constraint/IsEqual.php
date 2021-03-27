@@ -1,4 +1,4 @@
-<?php
+<?php declare(strict_types=1);
 /*
  * This file is part of PHPUnit.
  *
@@ -9,8 +9,11 @@
  */
 namespace PHPUnit\Framework\Constraint;
 
+use function is_string;
+use function sprintf;
+use function strpos;
+use function trim;
 use PHPUnit\Framework\ExpectationFailedException;
-use PHPUnit\Util\InvalidArgumentHelper;
 use SebastianBergmann\Comparator\ComparisonFailure;
 use SebastianBergmann\Comparator\Factory as ComparatorFactory;
 
@@ -18,76 +21,43 @@ use SebastianBergmann\Comparator\Factory as ComparatorFactory;
  * Constraint that checks if one value is equal to another.
  *
  * Equality is checked with PHP's == operator, the operator is explained in
- * detail at {@url http://www.php.net/manual/en/types.comparisons.php}.
+ * detail at {@url https://php.net/manual/en/types.comparisons.php}.
  * Two values are equal if they have the same value disregarding type.
  *
  * The expected value is passed in the constructor.
  */
-class IsEqual extends Constraint
+final class IsEqual extends Constraint
 {
     /**
      * @var mixed
      */
-    protected $value;
+    private $value;
 
     /**
      * @var float
      */
-    protected $delta = 0.0;
-
-    /**
-     * @var int
-     */
-    protected $maxDepth = 10;
+    private $delta;
 
     /**
      * @var bool
      */
-    protected $canonicalize = false;
+    private $canonicalize;
 
     /**
      * @var bool
      */
-    protected $ignoreCase = false;
+    private $ignoreCase;
 
-    /**
-     * @param mixed $value
-     * @param float $delta
-     * @param int   $maxDepth
-     * @param bool  $canonicalize
-     * @param bool  $ignoreCase
-     *
-     * @throws \PHPUnit\Framework\Exception
-     */
-    public function __construct($value, $delta = 0.0, $maxDepth = 10, $canonicalize = false, $ignoreCase = false)
+    public function __construct($value, float $delta = 0.0, int $maxDepth = 10, bool $canonicalize = false, bool $ignoreCase = false)
     {
-        parent::__construct();
-
-        if (!\is_numeric($delta)) {
-            throw InvalidArgumentHelper::factory(2, 'numeric');
-        }
-
-        if (!\is_int($maxDepth)) {
-            throw InvalidArgumentHelper::factory(3, 'integer');
-        }
-
-        if (!\is_bool($canonicalize)) {
-            throw InvalidArgumentHelper::factory(4, 'boolean');
-        }
-
-        if (!\is_bool($ignoreCase)) {
-            throw InvalidArgumentHelper::factory(5, 'boolean');
-        }
-
         $this->value        = $value;
         $this->delta        = $delta;
-        $this->maxDepth     = $maxDepth;
         $this->canonicalize = $canonicalize;
         $this->ignoreCase   = $ignoreCase;
     }
 
     /**
-     * Evaluates the constraint for parameter $other
+     * Evaluates the constraint for parameter $other.
      *
      * If $returnResult is set to false (the default), an exception is thrown
      * in case of a failure. null is returned otherwise.
@@ -96,15 +66,9 @@ class IsEqual extends Constraint
      * a boolean value instead: true in case of success, false in case of a
      * failure.
      *
-     * @param mixed  $other        Value or object to evaluate.
-     * @param string $description  Additional information about the test
-     * @param bool   $returnResult Whether to return a result or throw an exception
-     *
-     * @return mixed
-     *
      * @throws ExpectationFailedException
      */
-    public function evaluate($other, $description = '', $returnResult = false)
+    public function evaluate($other, string $description = '', bool $returnResult = false)
     {
         // If $this->value and $other are identical, they are also equal.
         // This is the most common path and will allow us to skip
@@ -134,7 +98,7 @@ class IsEqual extends Constraint
             }
 
             throw new ExpectationFailedException(
-                \trim($description . "\n" . $f->getMessage()),
+                trim($description . "\n" . $f->getMessage()),
                 $f
             );
         }
@@ -145,33 +109,33 @@ class IsEqual extends Constraint
     /**
      * Returns a string representation of the constraint.
      *
-     * @return string
+     * @throws \SebastianBergmann\RecursionContext\InvalidArgumentException
      */
-    public function toString()
+    public function toString(): string
     {
         $delta = '';
 
-        if (\is_string($this->value)) {
-            if (\strpos($this->value, "\n") !== false) {
+        if (is_string($this->value)) {
+            if (strpos($this->value, "\n") !== false) {
                 return 'is equal to <text>';
             }
 
-            return \sprintf(
+            return sprintf(
                 "is equal to '%s'",
                 $this->value
             );
         }
 
         if ($this->delta != 0) {
-            $delta = \sprintf(
+            $delta = sprintf(
                 ' with delta <%F>',
                 $this->delta
             );
         }
 
-        return \sprintf(
+        return sprintf(
             'is equal to %s%s',
-            $this->exporter->export($this->value),
+            $this->exporter()->export($this->value),
             $delta
         );
     }
