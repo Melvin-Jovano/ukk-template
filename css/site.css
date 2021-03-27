@@ -1,0 +1,120 @@
+:root {
+    --primary: #007bff;
+    --danger: #dc3545;
+    --warning: #dc3545;
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.nav-link {
+    color:var(--dark);
+}
+
+.bio-data {
+	letter-spacing: 1px;
+}
+
+.active {
+    background-color: var(--success)!important;
+}
+
+.help-block-error {
+    color:var(--danger);
+	font-size: small;
+}
+.wallpaper{
+	position: fixed;
+	z-index: 1;
+	width: 100vw;
+	height: 100vh;
+}
+.boxes1{
+	animation: boxed 30s infinite linear;
+	background-color: grey;
+	width: 85px;
+	margin-left: 5%;
+	height: 85px;
+	position: relative;
+	z-index: -1;
+}
+.boxes2{
+	animation: boxed 20s infinite linear;
+	margin-left: 10%;
+	background-color: grey;
+	width: 45px;
+	height: 45px;
+	position: relative;
+	z-index: -1;
+}
+.boxes3{
+	animation: boxed 25s infinite linear;
+	background-color: grey;
+	margin-left: 30%;
+	width: 120px;
+	height: 120px;
+	position: relative;
+	z-index: -1;
+}
+.boxes4{
+	animation: boxed 45s infinite linear;
+	background-color: grey;
+	margin-left: 80%;
+	width: 320px;
+	height: 320px;
+	position: relative;
+	z-index: -1;
+}
+.boxes5{
+	animation: boxed 30s infinite linear;
+	background-color: grey;
+	margin-left: 45%;
+	width: 220px;
+	height: 220px;
+	position: relative;
+	z-index: -1;
+}
+.boxes6{
+	animation: boxed 40s infinite linear;
+	background-color: grey;
+	margin-left: 5%;
+	width: 270px;
+	height: 270px;
+	position: relative;
+	z-index: -1;
+}
+@keyframes boxed {
+	0%{
+		opacity: 0.5;
+		top: 100%;
+		transform: rotate(0deg);
+	}
+	100%{
+		opacity: 0;
+		top: 0;
+		transform: rotate(720deg);
+	}
+}
