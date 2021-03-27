@@ -138,4 +138,30 @@ class ActionController extends Controller
             
         }
     }
+
+    public function actionGetAllHistory()
+    {
+        Yii::$app->response->format = Response::FORMAT_JSON;
+        $req = Yii::$app->request;
+
+        if ($req->isAjax) {
+            $data = (new \yii\db\Query())
+            ->select("spp.created_at, spp.nominal, siswa.nama, jurusan.jurusan, kelas.kelas")
+            ->from('spp')
+            ->leftJoin('siswa', 'siswa.nisn = spp.nisn')
+            ->leftJoin('jurusan', 'jurusan.id = siswa.id_jurusan')
+            ->leftJoin('kelas', 'kelas.id = siswa.id_kelas')
+            ->all();
+
+            if($data) {
+                return $response = [
+                    'data' => $data,
+                ];
+            } else {
+                return $response = [
+                    'data' => false
+                ];
+            }
+        }
+    }
 }

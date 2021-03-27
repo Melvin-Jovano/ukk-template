@@ -14,7 +14,7 @@ $this->title = 'Pembayaran';
 <div class="row">
     
     <div class="col-lg-12 mt-3">
-        <div class="card">
+        <div class="">
 
             <div class="card-content p-3">
                 <?php $form = ActiveForm::begin(['id' => 'bio-form']); ?>
@@ -41,28 +41,25 @@ $this->title = 'Pembayaran';
 
         </div>
     </div>
-
-    <div class="col-lg-12 my-5">
-        <div class="card">
-            
-            <div class="card-header">
-                <small class="text-muted float-right">Untuk <span id="month">0</span> Bulan</small>
-            </div>
+    <hr>
+    <div class="col-lg-12">
+        <div class="">
 
             <div class="card-content p-3" id="transaksi">
                 <div class="row">
-                    <div class="col-12">
-                        <b class="mb-2 d-block">Pembayaran</b>
-                        <?= $form->field($model, 'nominal')->textInput(['id' => 'nominal', 'placeholder' => 'Cth. 200000'])->label(false); ?>
+                    <div class="col-6">
+                        <b class="mb-2 d-block">Jumlah Uang</b>
+                        <?= $form->field($model, 'nominal')->textInput(['id' => 'nominal'])->label(false); ?>
                     </div>
 
-                    <div class="col-12">
+                    <div class="col-6">
                         <b class="mb-2 d-block">Kembalian</b>
                         <input type="text" disabled="true" id="exchange" class="form-control">
                     </div>
                 </div>
+                <?= Html::submitButton('Bayar', ['class' => 'btn btn-success ', 'id' => 'btn-pay']) ?>
             </div>
-            <?= Html::submitButton('<i class="fas fa-check"></i>&nbsp;&nbsp;Bayar', ['class' => 'btn btn-light ', 'id' => 'btn-pay']) ?>
+            
             <?php ActiveForm::end(); ?>
 
         </div>
@@ -104,7 +101,7 @@ $this->registerJs('
             formData.append("class", $("#id-class").val());
             formData.append("skill", $("#id-skill").val());
             $.ajax({
-                url : "/action/get-siswa",
+                url : "/daffa_ukk/admin/action/get-siswa",
                 type : "post",
                 data: formData,
                 processData: false,
