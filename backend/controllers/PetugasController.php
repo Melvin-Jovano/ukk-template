@@ -118,7 +118,9 @@ class PetugasController extends Controller
     {
         $model = $this->findModel($id);
         $model->password = "";
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        if ($model->load(Yii::$app->request->post())) {
+            $model->password = Yii::$app->security->generatePasswordHash(Yii::$app->request->post("Petugas")['password']);
+            $model->save();
             return $this->redirect(['view', 'id' => $model->id]);
         }
 
