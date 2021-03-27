@@ -12,7 +12,7 @@ $this->title = 'Login Admin';
 
 <main class="d-flex align-items-center py-md-0">
     <div class="container">
-      <div class="card login-card">
+      <div class="card login-card bg-success">
         <div class="row no-gutters">
         <div class="col-md-3"></div>
           <div class="col-md-6">
@@ -30,7 +30,7 @@ $this->title = 'Login Admin';
                 <br>
 
                 <div class="form-group">
-                    <?= Html::submitButton('Login', ['class' => 'btn btn-success', 'name' => 'login-button']) ?>
+                    <?= Html::submitButton('Login', ['class' => 'btn btn-dark', 'name' => 'login-button']) ?>
                 </div>
 
                 <?php ActiveForm::end(); ?>
