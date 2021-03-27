@@ -46,7 +46,7 @@ $this->registerJs('
             formData.append("date1", start.format("YYYY-MM-DD"));
             formData.append("date2", end.format("YYYY-MM-DD"));
             $.ajax({
-                url : "/action/get-specific-data",
+                url : "/reza_ukk/admin/action/get-specific-data",
                 type : "post",
                 data: formData,
                 processData: false,
@@ -100,7 +100,7 @@ $this->registerJs('
         // $("#table").slideUp();
         let formData = new FormData;
         $.ajax({
-            url : "/action/get-all-data",
+            url : "/reza_ukk/action/get-all-data",
             type : "post",
             data: formData,
             processData: false,
