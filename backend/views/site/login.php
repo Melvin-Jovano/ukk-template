@@ -12,7 +12,7 @@ $this->title = 'Login Admin';
 
 <main class="d-flex align-items-center py-md-0">
     <div class="container">
-      <div class="card login-card">
+      <div class="card login-card bg-danger">
         <div class="row no-gutters">
         <div class="col-md-3"></div>
           <div class="col-md-6">
