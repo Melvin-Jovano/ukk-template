@@ -6,7 +6,7 @@ $currentUrl = $this->context->route;
 
 ?>
 <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-light shadow bg-dark text-light" id="sidenavAccordion">
+                <nav class="sb-sidenav accordion sb-sidenav-light shadow bg-warning text-light" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <hr>
@@ -47,7 +47,7 @@ $currentUrl = $this->context->route;
                                 <div class="dropdown-divider"></div>
 
                                 <a class="nav-link text-light" data-method="post" href="<?= Url::toRoute(['site/logout']); ?>">
-                                    <div class="btn-light btn-block btn">Logout (<?= Yii::$app->user->identity->nama_petugas; ?>)</div>
+                                    <div class="btn-danger btn-block btn">Logout (<?= Yii::$app->user->identity->nama_petugas; ?>)</div>
                                 </a>
                         </div>
                     </div>
