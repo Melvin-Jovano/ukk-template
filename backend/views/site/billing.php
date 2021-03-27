@@ -101,7 +101,7 @@ $this->registerJs('
             formData.append("class", $("#id-class").val());
             formData.append("skill", $("#id-skill").val());
             $.ajax({
-                url : "/cintami_ukk/admin/action/get-siswa",
+                url : "/diva_ukk/admin/action/get-siswa",
                 type : "post",
                 data: formData,
                 processData: false,
