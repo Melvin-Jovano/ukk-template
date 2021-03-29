@@ -28,7 +28,7 @@ use yii\helpers\Html;
             . Html::beginForm(['/site/logout'], 'post')
             . Html::submitButton(
                 'Logout (' . Yii::$app->user->identity->nama . ')',
-                ['class' => 'btn btn-danger logout']
+                ['class' => 'btn btn-warning logout']
             )
             . Html::endForm()
             . '</li>';
