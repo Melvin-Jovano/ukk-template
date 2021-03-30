@@ -11,7 +11,7 @@ use yii\helpers\Html;
         'brandLabel' => '<b>Siswa</b>',
         'brandUrl' => Yii::$app->homeUrl,
         'options' => [
-            'class' => 'shadow navbar-expand-lg navbar-light bg-primary sticky-top',
+            'class' => 'shadow navbar-expand-lg navbar-light bg-dark sticky-top',
         ],
     ]);
     // $menuItems = [
