@@ -5,7 +5,7 @@ $url = Yii::$app->request->url;
 
 ?>
 
-<nav class="sb-topnav navbar navbar-expand  shadow-lg" style="background-color:#F87171">
+<nav class="sb-topnav navbar navbar-expand bg-primary shadow-lg" style="background-color:#F87171">
             <a class="navbar-brand text-dark" href=""><b>SPP APP</b></a>
             <button class="btn btn-link btn-sm order-1 order-lg-0 text-dark" id="sidebarToggle" href="#"><i class="fas fa-home"></i></button>
             <!-- Navbar Search-->

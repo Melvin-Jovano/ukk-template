@@ -6,7 +6,7 @@ $currentUrl = $this->context->route;
 
 ?>
 <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-light shadow bg-dark text-light" id="sidenavAccordion">
+                <nav class="sb-sidenav accordion sb-sidenav-light bg-primary shadow text-light" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <hr>
@@ -28,7 +28,7 @@ $currentUrl = $this->context->route;
                             </a>
                             
                             <a class="nav-link text-light <?= $currentUrl == "site/billing" ? "active" : "" ?>" href="<?= Url::toRoute(['site/billing']); ?>">
-                                => Data Bayar SPP
+                                => Bayar SPP
                             </a>
 
                             <a class="nav-link text-light <?= $currentUrl == "site/report" ? "active" : "" ?>" href="<?= Url::toRoute(['site/report']); ?>">
