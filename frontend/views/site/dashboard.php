@@ -100,7 +100,7 @@ $this->registerJs('
         // $("#table").slideUp();
         let formData = new FormData;
         $.ajax({
-            url : "/ardy_ukk/action/get-all-data",
+            url : "/raf_ukk/action/get-all-data",
             type : "post",
             data: formData,
             processData: false,

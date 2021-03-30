@@ -47,7 +47,7 @@ $currentUrl = $this->context->route;
                                 <div class="dropdown-divider"></div>
 
                                 <a class="nav-link text-light" data-method="post" href="<?= Url::toRoute(['site/logout']); ?>">
-                                    <div class="btn-light btn-block btn">Logout (<?= Yii::$app->user->identity->nama_petugas; ?>)</div>
+                                    <div class="btn-danger btn-block btn">Logout (<?= Yii::$app->user->identity->nama_petugas; ?>)</div>
                                 </a>
                         </div>
                     </div>
