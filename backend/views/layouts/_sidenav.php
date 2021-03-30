@@ -6,7 +6,7 @@ $currentUrl = $this->context->route;
 
 ?>
 <div id="layoutSidenav_nav">
-                <nav class="sb-sidenav accordion sb-sidenav-light shadow bg-warning text-light" id="sidenavAccordion">
+                <nav class="sb-sidenav accordion sb-sidenav-light shadow bg-primary text-light" id="sidenavAccordion">
                     <div class="sb-sidenav-menu">
                         <div class="nav">
                             <hr>
